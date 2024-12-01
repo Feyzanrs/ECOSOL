@@ -10,23 +10,26 @@ const Home = () => {
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Card>
-          <CardHeader title='Kick start fmdkd project 🚀'></CardHeader>
+          <CardHeader title='Why Are These Tasks Important?
+'></CardHeader>
           <CardContent>
             <Typography sx={{ mb: 2 }}>All the best for your new project.</Typography>
             <Typography>
-             to read our Template Documentation to understand where to go from here and how to use our
-              template.
+For a Cleaner World: Recycling prevents plastics and other waste from harming the environment. By recycling just one plastic bottle, you can help reduce the damage to nature.
+To Reduce Your Carbon Footprint: Using public transportation or riding a bicycle significantly reduces carbon emissions compared to individual car usage.
+For Future Generations: Every eco-friendly step you take today contributes to a more livable world for our children.
+
             </Typography>
           </CardContent>
         </Card>
       </Grid>
       <Grid item xs={12}>
         <Card>
-          <CardHeader title='ACL and JWT 🔒'></CardHeader>
+          <CardHeader title='What Does This Platform Offer You'></CardHeader>
           <CardContent>
             <Typography sx={{ mb: 2 }}>
-              Access Control (ACL) and Authentication (JWT) are the two main security features of our template and are implemented in the starter-kit as well.
-            </Typography>
+Rewards for Eco-Friendly Actions: Earn Solana tokens by recycling, using bicycles or public transportation, and engaging in other environmentally-friendly behaviors.
+Big Impact Through Small Changes: This journey starts with small tasks and opens the door to significant changes.            </Typography>
             <Typography>Please read our Authentication and ACL Documentations to get more out of them.</Typography>
           </CardContent>
         </Card>

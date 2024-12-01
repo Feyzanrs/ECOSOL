@@ -1,4 +1,7 @@
 import { FirebaseError } from 'firebase/app'
+import { auth, db } from 'src/configs/firebaseConfig'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore'
 
 // Kullanıcı giriş bilgileri için tip tanımı
 export interface LoginRequest {
@@ -27,6 +30,7 @@ export interface RegisterResponse {
     id: string
     username: string
     email: string
+    walletAddress: string
   }
   error?: FirebaseError
 }
@@ -47,6 +51,7 @@ export interface UserData {
   displayName: string | null
   emailVerified: boolean
   disabled: boolean
+  walletAddress: string | null
 }
 
 // API cevabı tipi
@@ -54,4 +59,34 @@ export interface ApiResponse<T = any> {
   success: boolean
   message: string
   data?: T
+}
+
+export const registerUser = async (data: RegisterRequest) => {
+  try {
+    // Önce Solana cüzdanı oluştur
+    const createWallet = require('src/utils/createWallet')
+    const wallet = createWallet()
+
+    // Firebase Auth'a kullanıcıyı kaydet
+    const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password)
+    
+    // Firestore'a kullanıcı bilgilerini ve cüzdan adresini kaydet
+    await setDoc(doc(db, 'users', userCredential.user.uid), {
+      username: data.username,
+      email: data.email,
+      walletAddress: wallet.publicKey,  // Otomatik oluşturulan cüzdan adresi
+      createdAt: new Date().toISOString()
+    })
+
+    return {
+      user: {
+        id: userCredential.user.uid,
+        username: data.username,
+        email: data.email,
+        walletAddress: wallet.publicKey
+      }
+    }
+  } catch (error) {
+    return { error }
+  }
 }

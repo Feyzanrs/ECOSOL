@@ -14,34 +14,31 @@ const PublicTransportTask = () => {
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Typography variant='h5' sx={{ mb: 4 }}>
-          Toplu Taşıma Kullanma
+          Using Public Transport
         </Typography>
       </Grid>
       
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Faydaları
+              Benefits
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Karbon salınımını azaltır' />
+                <ListItemText primary='Reduces carbon emissions' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Hava kirliliğini azaltır' />
+                <ListItemText primary='Reduces air pollution' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Enerji verimliliği sağlar' />
+                <ListItemText primary='Provides energy efficiency' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Trafik yoğunluğunu azaltır' />
+                <ListItemText primary='Reduces traffic congestion' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Doğal kaynakların korunmasına yardımcı olur' />
-              </ListItem>
-              <ListItem>
-                <ListItemText primary='Gürültü kirliliğini azaltır' />
+                <ListItemText primary='Economical transportation' />
               </ListItem>
             </List>
           </CardContent>
@@ -49,28 +46,28 @@ const PublicTransportTask = () => {
       </Grid>
 
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Nasıl Yapılır?
+              How to Do It?
             </Typography>
             <List>
               <ListItem>
                 <ListItemText 
-                  primary='Güzergahınızı planlayın' 
-                  secondary='Gideceğiniz yere uygun toplu taşıma aracını seçin'
+                  primary='Board the public transport' 
+                  secondary='Locate the payment area near the entrance'
                 />
               </ListItem>
               <ListItem>
                 <ListItemText 
-                  primary='Toplu taşıma kartınızı hazırlayın' 
-                  secondary='Kartınızda yeterli bakiye olduğundan emin olun'
+                  primary='Scan the QR code next to the payment terminal' 
+                  secondary='Ensure your device is ready to process the transaction'
                 />
               </ListItem>
               <ListItem>
                 <ListItemText 
-                  primary='Kart okutma cihazının yanındaki QR kodu okutun' 
-                  secondary='Görevi tamamlamak ve ödülünüzü kazanmak için QR kodu tarayın'
+                  primary='Wait for the confirmation of your transaction' 
+                  secondary='A notification will indicate the payment is successful'
                 />
               </ListItem>
             </List>
@@ -80,7 +77,7 @@ const PublicTransportTask = () => {
 
       <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
         <Button variant='contained' startIcon={<Icon icon='mdi:qr-code-scanner' />}>
-          QR Kodu Tara
+          Scan QR Code
         </Button>
       </Grid>
     </Grid>

@@ -14,25 +14,31 @@ const EScooterTask = () => {
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Typography variant='h5' sx={{ mb: 4 }}>
-          Elektrikli Scooter Kullanımı
+          Using E-Scooter
         </Typography>
       </Grid>
       
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Faydaları
+              Benefits
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Düşük karbon ayak izi' />
+                <ListItemText primary='Low carbon footprint' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Trafik sorununa çözüm' />
+                <ListItemText primary='Solution to traffic problems' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Hızlı ve pratik ulaşım' />
+                <ListItemText primary='Fast and practical transportation' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='Reduces urban congestion' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='Cost-effective for short trips' />
               </ListItem>
             </List>
           </CardContent>
@@ -40,29 +46,38 @@ const EScooterTask = () => {
       </Grid>
 
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Nasıl Yapılır?
+              How to Do It?
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Scooter uygulamasını indirin' />
+                <ListItemText 
+                  primary='Download the scooter app' 
+                  secondary='Register and add payment method'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Güvenli sürüş kurallarını öğrenin' />
+                <ListItemText 
+                  primary='Learn safe riding rules' 
+                  secondary='Follow traffic and safety guidelines'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Uygun park alanlarını kullanın' />
+                <ListItemText 
+                  primary='Use appropriate parking areas' 
+                  secondary='Park in designated zones only'
+                />
               </ListItem>
             </List>
           </CardContent>
         </Card>
       </Grid>
 
-      <Grid item xs={12}>
-        <Button variant='contained' startIcon={<Icon icon='mdi:check' />}>
-          Görevi Tamamladım
+      <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+        <Button variant='contained' startIcon={<Icon icon='mdi:qr-code-scanner' />}>
+          Scan QR Code
         </Button>
       </Grid>
     </Grid>

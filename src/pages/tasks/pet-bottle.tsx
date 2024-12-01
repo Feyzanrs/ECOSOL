@@ -14,25 +14,31 @@ const PetBottleTask = () => {
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Typography variant='h5' sx={{ mb: 4 }}>
-          Pet Şişe Atık Toplama
+          Recycling PET Bottles
         </Typography>
       </Grid>
       
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Faydaları
+              Benefits
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Geri dönüşüme katkı sağlar' />
+                <ListItemText primary='Reduces plastic waste in landfills' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Çevre kirliliğini azaltır' />
+                <ListItemText primary='Saves energy resources' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Doğal kaynakları korur' />
+                <ListItemText primary='Prevents ocean pollution' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='Reduces CO2 emissions' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='Supports circular economy' />
               </ListItem>
             </List>
           </CardContent>
@@ -40,29 +46,38 @@ const PetBottleTask = () => {
       </Grid>
 
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Nasıl Yapılır?
+              How to Do It?
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Pet şişeleri biriktirin' />
+                <ListItemText 
+                  primary='Clean the bottles' 
+                  secondary='Rinse bottles to remove any residue'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Şişeleri yıkayıp temizleyin' />
+                <ListItemText 
+                  primary='Remove caps and labels' 
+                  secondary='Separate different materials for proper recycling'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='En yakın geri dönüşüm kutusuna atın' />
+                <ListItemText 
+                  primary='Take to recycling point' 
+                  secondary='Find the nearest recycling machine or collection point'
+                />
               </ListItem>
             </List>
           </CardContent>
         </Card>
       </Grid>
 
-      <Grid item xs={12}>
-        <Button variant='contained' startIcon={<Icon icon='mdi:check' />}>
-          Görevi Tamamladım
+      <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+        <Button variant='contained' startIcon={<Icon icon='mdi:qr-code-scanner' />}>
+          Scan QR Code
         </Button>
       </Grid>
     </Grid>

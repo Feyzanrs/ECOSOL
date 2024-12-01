@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import Icon from 'src/@core/components/icon'
 
 // ** Types
-import { Task } from 'src/types/tasks'
+import { Task } from 'src/pages/tasks'
 
 interface Props {
   task: Task
@@ -19,6 +19,8 @@ const TaskCard = ({ task }: Props) => {
     <Card 
       sx={{ 
         cursor: 'pointer',
+        height: '100%',
+        minHeight: '300px',
         '&:hover': { transform: 'translateY(-5px)', transition: 'transform 0.3s' }
       }}
       onClick={() => router.push(task.route)}
@@ -32,7 +34,7 @@ const TaskCard = ({ task }: Props) => {
           {task.description}
         </Typography>
         <Typography variant='subtitle2' color='primary'>
-          {task.points} Puan
+          {task.points.toFixed(5)} Token
         </Typography>
       </CardContent>
     </Card>

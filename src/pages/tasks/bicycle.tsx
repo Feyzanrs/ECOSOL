@@ -14,25 +14,31 @@ const BicycleTask = () => {
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Typography variant='h5' sx={{ mb: 4 }}>
-          Bisiklet Kullanımı
+          Using Bicycle
         </Typography>
       </Grid>
       
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Faydaları
+              Benefits
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Sıfır karbon emisyonu' />
+                <ListItemText primary='Zero carbon emissions' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Fiziksel aktivite sağlar' />
+                <ListItemText primary='Provides physical activity' />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Ekonomik ulaşım' />
+                <ListItemText primary='Economic transportation' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='Reduces traffic congestion' />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary='No noise pollution' />
               </ListItem>
             </List>
           </CardContent>
@@ -40,29 +46,38 @@ const BicycleTask = () => {
       </Grid>
 
       <Grid item xs={12} md={6}>
-        <Card>
+        <Card sx={{ height: '100%', minHeight: '400px' }}>
           <CardContent>
             <Typography variant='h6' sx={{ mb: 4 }}>
-              Nasıl Yapılır?
+              How to Do It?
             </Typography>
             <List>
               <ListItem>
-                <ListItemText primary='Bisikletinizin bakımını yapın' />
+                <ListItemText 
+                  primary='Maintain your bicycle' 
+                  secondary='Ensure your bike is in good condition'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Güvenli rotalar belirleyin' />
+                <ListItemText 
+                  primary='Plan safe routes' 
+                  secondary='Choose bike-friendly roads and paths'
+                />
               </ListItem>
               <ListItem>
-                <ListItemText primary='Güvenlik ekipmanlarını kullanın' />
+                <ListItemText 
+                  primary='Use safety equipment' 
+                  secondary='Wear a helmet and use lights when needed'
+                />
               </ListItem>
             </List>
           </CardContent>
         </Card>
       </Grid>
 
-      <Grid item xs={12}>
-        <Button variant='contained' startIcon={<Icon icon='mdi:check' />}>
-          Görevi Tamamladım
+      <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+        <Button variant='contained' startIcon={<Icon icon='mdi:qr-code-scanner' />}>
+          Scan QR Code
         </Button>
       </Grid>
     </Grid>
